@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TextToSpeak" >
+
+    <TextView
+        android:id="@+id/tVSpeechRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Speech Rate" />
+
+    <SeekBar
+        android:id="@+id/sBSpeechRate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tVSpeechRate"
+        android:max="19"
+        android:progress="9" />
+
+    <TextView
+        android:id="@+id/tVPitchRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sBSpeechRate"
+        android:text="Set Pitch" />
+
+    <SeekBar
+        android:id="@+id/sBPitchRate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tVPitchRate"
+        android:max="19"
+        android:progress="9" />
+
+    <EditText
+        android:id="@+id/eTPronounce"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sBPitchRate"
+        android:ems="10"
+        android:hint="Enter Text to Speak" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btnSpeak"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Speak" />
+
+</LinearLayout>
